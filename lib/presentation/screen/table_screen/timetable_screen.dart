@@ -24,6 +24,7 @@ class _TableScreenState extends ConsumerState<TableScreen> {
   void initState() {
     super.initState();
     tablemsg(widget.engName,widget.subName);
+
   }
 
   @override
@@ -66,6 +67,7 @@ class _TableScreenState extends ConsumerState<TableScreen> {
               elevation: 0.1,
               onPressed: (){
                 tableLast(widget.subName);
+
                 final double endA = _scrollControllerA.position.maxScrollExtent;
                 final double endB = _scrollControllerB.position.maxScrollExtent;
                 _scrollControllerA.animateTo(
@@ -82,26 +84,29 @@ class _TableScreenState extends ConsumerState<TableScreen> {
           ),
         ],
       ),
+
+      /// 지하철 오픈 api에서 받는 시간표 정보에는 시간표 순서로 정렬되어있지 않다는점, 의미없는 기록 00:00:00이 너무 많다는 점이 있어
+      /// 모두 필터링한 후에 UI에 나타나도록함 futureProvider 대신에 statenotifeirprovider로 하면 컨트롤러 안에다 필터링된 값들을
+      /// 넣고 불러올 수 있을 거라 생각함
+
       child: table.when(
         data: (subTable){
           List<TableModel> subTableA = List.from(subTable.tableA);
           List<TableModel> subTableB = List.from(subTable.tableB);
-          subTableA.sort((a,b)=>a.arrivetime.compareTo(b.arrivetime));
-          subTableB.sort((a,b)=>a.arrivetime.compareTo(b.arrivetime));
-          var filtedA = subTableA.where((e) => e.arrivetime != '00:00:00').toList();
-          var filtedB = subTableB.where((e) => e.arrivetime != '00:00:00').toList();
-          /// 지하철 오픈 api에서 받는 시간표 정보에는 시간표 순서로 정렬되어있지 않다는점, 의미없는 기록 00:00:00이 너무 많다는 점이 있어
-          /// 모두 필터링한 후에 UI에 나타나도록함 futureProvider 대신에 statenotifeirprovider로 하면 컨트롤러 안에다 필터링된 값들을
-          /// 넣고 불러올 수 있을 거라 생
+          subTableA.sort((a,b)=>a.arriveTime.compareTo(b.arriveTime));
+          subTableB.sort((a,b)=>a.arriveTime.compareTo(b.arriveTime));
+          var filtedA = subTableA.where((e) => e.arriveTime != '00:00:00').toList();
+          var filtedB = subTableB.where((e) => e.arriveTime != '00:00:00').toList();
           if(filtedA.isNotEmpty && filtedB.isNotEmpty){
             return TimeTable(
               childA: ListView.builder(
                   controller: _scrollControllerA,
                   itemCount: filtedA.length,
                   itemBuilder:(context, index){
+
                     var row = filtedA[index];
                     return TableList(
-                        row.sname,row.ename, row.express.name,row.arrivetime);
+                        row.sName,row.eName, row.express.name,row.arriveTime);
                   }),
               childB: ListView.builder(
                   controller: _scrollControllerB,
@@ -109,26 +114,31 @@ class _TableScreenState extends ConsumerState<TableScreen> {
                   itemBuilder:(context, index){
                     var row = filtedB[index];
                     return TableList(
-                        row.sname,row.ename, row.express.name,row.arrivetime);
+                        row.sName,row.eName, row.express.name,row.arriveTime);
                   }),
             );
             }
           },
-          error: (err,stack) => Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFrame(comment: '${widget.subName}역 데이터를 제공받을 수 없습니다.'),
-              ),
-            ],
-          ),
+          error: (err,stack) => ErrorColumn(widget.subName),
           loading: () => const Center(
             child: TextFrame(comment: 'loading.....')),
           ),
     );
   }
 }
+
+
+
+Widget ErrorColumn(String name) => Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: TextFrame(comment: '$name역 데이터를 제공받을 수 없습니다.'),
+    ),
+  ],
+);
+
 
 Widget TableList(
     String sname, String ename, String express, String arrivetime) =>

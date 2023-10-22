@@ -23,7 +23,7 @@ final latlngProvider = FutureProvider.autoDispose<List<SubwayModel>>
   });
 
   data.value!.sort((a, b) => a.km!.compareTo(b.km!));
-  return data.value!.where((element) => element.line_ui.contains(
+  return data.value!.where((element) => element.lineUi.contains(
       line)).toList();
 });
 

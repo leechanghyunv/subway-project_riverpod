@@ -30,7 +30,7 @@ class InputSubway extends StatelessWidget {
                 child: TextFrame(comment: 'Loading.....')),
             error: (err, stack) => Text(err.toString()),
             data: (data) {
-              final filteredname = data.map((e) => e.subname).toSet().toList();
+              final filteredname = data.map((e) => e.subName).toSet().toList();
               return Container(
                 width: 61.w,
                 height: 15.6.w,

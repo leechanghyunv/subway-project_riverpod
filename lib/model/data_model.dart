@@ -7,12 +7,12 @@ part 'data_model.g.dart';
 @Freezed()
 class SubwayModel with _$SubwayModel{
   const factory SubwayModel({
-    required String subname,
-    required String engname,
+    required String subName,
+    required String engName,
     required double lat,
     required double lng,
-    required String line_ui,
-    required int subwayid,
+    required String lineUi,
+    required int subwayId,
     required String line,
     required String heading,
     @Default(false) bool? isSelected,

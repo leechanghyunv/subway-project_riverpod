@@ -10,3 +10,6 @@ Widget LoadingBox(String text) => Container(
   alignment: Alignment.center,
   child: TextFrame(comment: text),
 );
+
+Widget SwitchLoading() => const Center(
+    child: TextFrame(comment: 'loading.....'));

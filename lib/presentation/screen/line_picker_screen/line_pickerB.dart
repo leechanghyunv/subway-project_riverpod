@@ -29,7 +29,7 @@ class LinePickerB extends ConsumerWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: DialogDesign(
-                    designText: '${filtered[0].subname}역'),
+                    designText: '${filtered[0].subName}역'),
               ),
               Container(
                 color: Colors.grey[200],
@@ -41,14 +41,14 @@ class LinePickerB extends ConsumerWidget {
                             activeColor: Colors.grey[600],
                             title: Row(
                               children: [
-                                PickerIcon(filtered[index].line_ui),
+                                PickerIcon(filtered[index].lineUi),
                                 SizedBox(width: 10,),
-                                TextFrame(comment: filtered[index].line_ui),
+                                TextFrame(comment: filtered[index].lineUi),
                               ],
                               ),
                               subtitle: Consumer(
                                 builder: (context,ref,child){
-                                  var lineList = filtered[index].subwayid.toString();
+                                  var lineList = filtered[index].subwayId.toString();
                                   final filted = ref.watch(filtedInPickerProvider(lineList));
                                   return filted.when(
                                     loading: () => TextFrame(comment: 'loading.....'),
@@ -56,8 +56,8 @@ class LinePickerB extends ConsumerWidget {
                                     data: (data){
                                       return TextFramemin(
                                           comment: lineList.isNotEmpty
-                                          ? '${filted.value!.upfirst!.split(
-                                          "-")[1]}  -  ${filted.value!.downfirst!.split("-")[1]}'
+                                          ? '${filted.value!.upFirst!.split(
+                                          "-")[1]}  -  ${filted.value!.downFirst!.split("-")[1]}'
                                           : '');
                                     },
                                   );
@@ -66,8 +66,8 @@ class LinePickerB extends ConsumerWidget {
                               onChanged: (value){
                                 if(value != null){
                                   filtered = List.from(filtered.map((e) {
-                                    if(e.line_ui == filtered[index].line_ui){
-                                      lineNumber = filtered[index].line_ui;
+                                    if(e.lineUi == filtered[index].lineUi){
+                                      lineNumber = filtered[index].lineUi;
                                       return e.copyWith(isSelected: true);
                                     } else {
                                       return e;
@@ -97,9 +97,9 @@ class LinePickerB extends ConsumerWidget {
                   ),
                   onPressed: (){
                     ref.read(infoProviderB.notifier).searchSubway(
-                        name: filtered[0].subname, line: lineNumber);
+                        name: filtered[0].subName, line: lineNumber);
                     ref.read(storeProviderA.notifier).storeSubData('T');
-                    savemsg2(filtered[0].subname);
+                    savemsg2(filtered[0].subName);
                     Navigator.of(context).pop();
                   },
                   child: Text(

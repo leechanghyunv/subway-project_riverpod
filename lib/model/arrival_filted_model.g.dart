@@ -12,18 +12,18 @@ _$_FiltedArrivalModel _$$_FiltedArrivalModelFromJson(
       arrival: (json['arrival'] as List<dynamic>?)
           ?.map((e) => ArrivalModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-      upfirst: json['upfirst'] as String? ?? "정보없음",
-      uplast: json['uplast'] as String? ?? "정보없음",
-      downfirst: json['downfirst'] as String? ?? "정보없음",
-      downlast: json['downlast'] as String? ?? "정보없음",
+      upFirst: json['upFirst'] as String? ?? "정보없음",
+      upLast: json['upLast'] as String? ?? "정보없음",
+      downFirst: json['downFirst'] as String? ?? "정보없음",
+      downLast: json['downLast'] as String? ?? "정보없음",
     );
 
 Map<String, dynamic> _$$_FiltedArrivalModelToJson(
         _$_FiltedArrivalModel instance) =>
     <String, dynamic>{
       'arrival': instance.arrival,
-      'upfirst': instance.upfirst,
-      'uplast': instance.uplast,
-      'downfirst': instance.downfirst,
-      'downlast': instance.downlast,
+      'upFirst': instance.upFirst,
+      'upLast': instance.upLast,
+      'downFirst': instance.downFirst,
+      'downLast': instance.downLast,
     };

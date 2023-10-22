@@ -8,7 +8,7 @@ final apiCodeProvider = FutureProvider<List<CodeModel>>((ref) async {
   final subwayInfo = ref.watch(infoProvider);
   final apiservice = SeoulApiService.create();
 
-  var name = subwayInfo.elementAtOrNull(0)?.subname;
+  var name = subwayInfo.elementAtOrNull(0)?.subName;
 
   if(name == '서울'){
     name = '서울역';

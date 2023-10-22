@@ -33,7 +33,7 @@ class DialogPage extends ConsumerWidget {
                           SlidableAction(
                               onPressed: ((context){
                                 ref.read(infoProvider.notifier).
-                                searchSubway(name: row.subname);
+                                searchSubway(name: row.subName);
                                 showDialog(
                                     context: context,
                                     builder: (BuildContext context){
@@ -87,8 +87,8 @@ class DialogPage extends ConsumerWidget {
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: DialogDesignBoxC(
-                                            line: row.line_ui,
-                                            name: row.subname,
+                                            line: row.lineUi,
+                                            name: row.subName,
                                           ),
                                         ),
                                       ],
@@ -100,7 +100,7 @@ class DialogPage extends ConsumerWidget {
                                         comment: 'Cancel'),
                                     SizedBox(
                                       child: SmsFunction(
-                                          line: row.line_ui
+                                          line: row.lineUi
                                       ),
                                     ),
                                   ],
@@ -119,7 +119,7 @@ class DialogPage extends ConsumerWidget {
                         child: Material(
                           child: InkWell(
                             onTap: (){
-                              print(row.line_ui);
+                              print(row.lineUi);
                               Get.dialog(
                                 AlertDialog(
                                   content: initialdata.when(
@@ -127,10 +127,10 @@ class DialogPage extends ConsumerWidget {
                                     error: (err, stack) => LoadingBox(err.toString()),
                                     data: (data){
                                       ref.read(infoProvider.notifier).
-                                      searchSubway(name: row.subname, line: row.line_ui);
+                                      searchSubway(name: row.subName, line: row.lineUi);
                                       /// SwitchDialogC에 실시간 열차 데이터를 불러오기위해 콜백
                                       ref.read(infoProviderB.notifier).
-                                      searchSubway(name: row.subname);
+                                      searchSubway(name: row.subName);
                                       /// infoProviderB는 popupmenubutton을 구성하기 위해 콜백함
                                       /// ex 가산디지털단지 1호선,7호선 모두 포함되어야함 이 정보를 가져오기위함
                                       /// SwitchDialogC에서 보여짐
@@ -144,7 +144,7 @@ class DialogPage extends ConsumerWidget {
                                     DialogButton(
                                       comment: 'Select',
                                       onPressed: (){
-                                        Select(row.subname);
+                                        Select(row.subName);
                                         Navigator.pop(context);
                                       },
                                     ),
@@ -156,7 +156,7 @@ class DialogPage extends ConsumerWidget {
                               selectedColor: Colors.grey[300],
                               title: Row(
                                 children: [
-                                  Text(row.subname,
+                                  Text(row.subName,
                                     style: dialogcommon,
                                   ),
                                 ],

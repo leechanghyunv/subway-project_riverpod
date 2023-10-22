@@ -8,6 +8,7 @@ import '../screen/screen_controller.dart';
 /// 실시간 지하철 열차 정보를 보여주기 위한 부분임
 
 class SwitchDialogA extends ConsumerStatefulWidget {
+
   final String name;
   final String list;
   final String dest;
@@ -64,10 +65,10 @@ class _SwitchDialogAState extends ConsumerState<SwitchDialogA> {
                           TextFrame(
                             comment: '\n${widget.line} ${widget.name}역 -> ${widget.dest}역\n',
                           ),
-                          TextFrame(comment: data.upfirst.toString()),
-                          TextFrame(comment: data.uplast.toString()),
-                          TextFrame(comment: data.downfirst.toString()),
-                          TextFrame(comment: data.downlast.toString()),
+                          TextFrame(comment: data.upFirst.toString()),
+                          TextFrame(comment: data.upLast.toString()),
+                          TextFrame(comment: data.downFirst.toString()),
+                          TextFrame(comment: data.downLast.toString()),
                         ],
                       );
                     },
@@ -83,16 +84,14 @@ class _SwitchDialogAState extends ConsumerState<SwitchDialogA> {
             child: Row(
                 children: [
                   svg.when(
-                    loading: () => const Center(
-                        child: TextFrame(comment: 'loading.....')),
+                    loading: () => SwitchLoading(),
                     error: (err, stack) => const Icon(Icons.question_mark),
                     data: (data){
                       return data;
                     },
                   ),
                   weather.when(
-                    loading: () => const Center(
-                        child: TextFrame(comment: 'loading.....')),
+                    loading: () => SwitchLoading(),
                     error: (err, stack) => TextFrame(comment: err.toString()),
                     data: (data){
                       return Container(

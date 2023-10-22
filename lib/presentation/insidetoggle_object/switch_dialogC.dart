@@ -40,7 +40,7 @@ class _SwitchDialogCState extends ConsumerState<SwitchDialogC> {
             child: Consumer(
                 builder: (context,ref,child){
                   final filted = ref.watch(filtedArrivalProvider(
-                      subdata.first.subwayid.toString()));
+                      subdata.first.subwayId.toString()));
                   return filted.when(
                     loading: () => LoadingBox('loading'),
                     error: (err, stack) => LoadingBox('데이터를 불러올 수 없습니다'),
@@ -49,12 +49,12 @@ class _SwitchDialogCState extends ConsumerState<SwitchDialogC> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           TextFrame(
-                            comment: '\n${subdata.first.line} ${subdata.first.subname}역\n',
+                            comment: '\n${subdata.first.line} ${subdata.first.subName}역\n',
                           ),
-                          TextFrame(comment: data.upfirst.toString()),
-                          TextFrame(comment: data.uplast.toString()),
-                          TextFrame(comment: data.downfirst.toString()),
-                          TextFrame(comment: data.downlast.toString()),
+                          TextFrame(comment: data.upFirst.toString()),
+                          TextFrame(comment: data.upLast.toString()),
+                          TextFrame(comment: data.downFirst.toString()),
+                          TextFrame(comment: data.downLast.toString()),
                         ],
                       );
                     },
@@ -67,8 +67,7 @@ class _SwitchDialogCState extends ConsumerState<SwitchDialogC> {
             child: Row(
               children: [
                 svg.when(
-                  loading: () => const Center(
-                      child: TextFrame(comment: 'loading.....')),
+                  loading: () => SwitchLoading(),
                   error: (err, stack) => Icon(Icons.question_mark),
                   data: (data){
                     return data;
@@ -76,8 +75,7 @@ class _SwitchDialogCState extends ConsumerState<SwitchDialogC> {
                 ),
                 SizedBox(width: 5,),
                 weather.when(
-                  loading: () => const Center(
-                      child: TextFrame(comment: 'loading.....')),
+                  loading: () => SwitchLoading(),
                   error: (err, stack) => TextFrame(comment: err.toString()),
                   data: (data){
                     return Container(
@@ -97,8 +95,8 @@ class _SwitchDialogCState extends ConsumerState<SwitchDialogC> {
                   itemBuilder: (BuildContext context){
                     return ref.watch(infoProviderB).map((e){
                       return PopupMenuItem(
-                          value: e.line_ui,
-                          child: TextFrame(comment: e.line_ui)
+                          value: e.lineUi,
+                          child: TextFrame(comment: e.lineUi)
                       );
                     }).toList();
                   },
@@ -106,7 +104,7 @@ class _SwitchDialogCState extends ConsumerState<SwitchDialogC> {
                   onSelected: (value){
                     print(value);
                     ref.read(infoProvider.notifier).
-                    searchSubway(name: subdata.first.subname,line: value); // line: value
+                    searchSubway(name: subdata.first.subName,line: value); // line: value
                   },
                 )
               ],

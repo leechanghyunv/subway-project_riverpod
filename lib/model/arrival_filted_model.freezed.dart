@@ -21,10 +21,10 @@ FiltedArrivalModel _$FiltedArrivalModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$FiltedArrivalModel {
   List<ArrivalModel>? get arrival => throw _privateConstructorUsedError;
-  String? get upfirst => throw _privateConstructorUsedError;
-  String? get uplast => throw _privateConstructorUsedError;
-  String? get downfirst => throw _privateConstructorUsedError;
-  String? get downlast => throw _privateConstructorUsedError;
+  String? get upFirst => throw _privateConstructorUsedError;
+  String? get upLast => throw _privateConstructorUsedError;
+  String? get downFirst => throw _privateConstructorUsedError;
+  String? get downLast => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,10 +40,10 @@ abstract class $FiltedArrivalModelCopyWith<$Res> {
   @useResult
   $Res call(
       {List<ArrivalModel>? arrival,
-      String? upfirst,
-      String? uplast,
-      String? downfirst,
-      String? downlast});
+      String? upFirst,
+      String? upLast,
+      String? downFirst,
+      String? downLast});
 }
 
 /// @nodoc
@@ -60,31 +60,31 @@ class _$FiltedArrivalModelCopyWithImpl<$Res, $Val extends FiltedArrivalModel>
   @override
   $Res call({
     Object? arrival = freezed,
-    Object? upfirst = freezed,
-    Object? uplast = freezed,
-    Object? downfirst = freezed,
-    Object? downlast = freezed,
+    Object? upFirst = freezed,
+    Object? upLast = freezed,
+    Object? downFirst = freezed,
+    Object? downLast = freezed,
   }) {
     return _then(_value.copyWith(
       arrival: freezed == arrival
           ? _value.arrival
           : arrival // ignore: cast_nullable_to_non_nullable
               as List<ArrivalModel>?,
-      upfirst: freezed == upfirst
-          ? _value.upfirst
-          : upfirst // ignore: cast_nullable_to_non_nullable
+      upFirst: freezed == upFirst
+          ? _value.upFirst
+          : upFirst // ignore: cast_nullable_to_non_nullable
               as String?,
-      uplast: freezed == uplast
-          ? _value.uplast
-          : uplast // ignore: cast_nullable_to_non_nullable
+      upLast: freezed == upLast
+          ? _value.upLast
+          : upLast // ignore: cast_nullable_to_non_nullable
               as String?,
-      downfirst: freezed == downfirst
-          ? _value.downfirst
-          : downfirst // ignore: cast_nullable_to_non_nullable
+      downFirst: freezed == downFirst
+          ? _value.downFirst
+          : downFirst // ignore: cast_nullable_to_non_nullable
               as String?,
-      downlast: freezed == downlast
-          ? _value.downlast
-          : downlast // ignore: cast_nullable_to_non_nullable
+      downLast: freezed == downLast
+          ? _value.downLast
+          : downLast // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -100,10 +100,10 @@ abstract class _$$_FiltedArrivalModelCopyWith<$Res>
   @useResult
   $Res call(
       {List<ArrivalModel>? arrival,
-      String? upfirst,
-      String? uplast,
-      String? downfirst,
-      String? downlast});
+      String? upFirst,
+      String? upLast,
+      String? downFirst,
+      String? downLast});
 }
 
 /// @nodoc
@@ -118,31 +118,31 @@ class __$$_FiltedArrivalModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? arrival = freezed,
-    Object? upfirst = freezed,
-    Object? uplast = freezed,
-    Object? downfirst = freezed,
-    Object? downlast = freezed,
+    Object? upFirst = freezed,
+    Object? upLast = freezed,
+    Object? downFirst = freezed,
+    Object? downLast = freezed,
   }) {
     return _then(_$_FiltedArrivalModel(
       arrival: freezed == arrival
           ? _value._arrival
           : arrival // ignore: cast_nullable_to_non_nullable
               as List<ArrivalModel>?,
-      upfirst: freezed == upfirst
-          ? _value.upfirst
-          : upfirst // ignore: cast_nullable_to_non_nullable
+      upFirst: freezed == upFirst
+          ? _value.upFirst
+          : upFirst // ignore: cast_nullable_to_non_nullable
               as String?,
-      uplast: freezed == uplast
-          ? _value.uplast
-          : uplast // ignore: cast_nullable_to_non_nullable
+      upLast: freezed == upLast
+          ? _value.upLast
+          : upLast // ignore: cast_nullable_to_non_nullable
               as String?,
-      downfirst: freezed == downfirst
-          ? _value.downfirst
-          : downfirst // ignore: cast_nullable_to_non_nullable
+      downFirst: freezed == downFirst
+          ? _value.downFirst
+          : downFirst // ignore: cast_nullable_to_non_nullable
               as String?,
-      downlast: freezed == downlast
-          ? _value.downlast
-          : downlast // ignore: cast_nullable_to_non_nullable
+      downLast: freezed == downLast
+          ? _value.downLast
+          : downLast // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -153,10 +153,10 @@ class __$$_FiltedArrivalModelCopyWithImpl<$Res>
 class _$_FiltedArrivalModel implements _FiltedArrivalModel {
   const _$_FiltedArrivalModel(
       {final List<ArrivalModel>? arrival,
-      this.upfirst = "정보없음",
-      this.uplast = "정보없음",
-      this.downfirst = "정보없음",
-      this.downlast = "정보없음"})
+      this.upFirst = "정보없음",
+      this.upLast = "정보없음",
+      this.downFirst = "정보없음",
+      this.downLast = "정보없음"})
       : _arrival = arrival;
 
   factory _$_FiltedArrivalModel.fromJson(Map<String, dynamic> json) =>
@@ -174,20 +174,20 @@ class _$_FiltedArrivalModel implements _FiltedArrivalModel {
 
   @override
   @JsonKey()
-  final String? upfirst;
+  final String? upFirst;
   @override
   @JsonKey()
-  final String? uplast;
+  final String? upLast;
   @override
   @JsonKey()
-  final String? downfirst;
+  final String? downFirst;
   @override
   @JsonKey()
-  final String? downlast;
+  final String? downLast;
 
   @override
   String toString() {
-    return 'FiltedArrivalModel(arrival: $arrival, upfirst: $upfirst, uplast: $uplast, downfirst: $downfirst, downlast: $downlast)';
+    return 'FiltedArrivalModel(arrival: $arrival, upFirst: $upFirst, upLast: $upLast, downFirst: $downFirst, downLast: $downLast)';
   }
 
   @override
@@ -196,12 +196,12 @@ class _$_FiltedArrivalModel implements _FiltedArrivalModel {
         (other.runtimeType == runtimeType &&
             other is _$_FiltedArrivalModel &&
             const DeepCollectionEquality().equals(other._arrival, _arrival) &&
-            (identical(other.upfirst, upfirst) || other.upfirst == upfirst) &&
-            (identical(other.uplast, uplast) || other.uplast == uplast) &&
-            (identical(other.downfirst, downfirst) ||
-                other.downfirst == downfirst) &&
-            (identical(other.downlast, downlast) ||
-                other.downlast == downlast));
+            (identical(other.upFirst, upFirst) || other.upFirst == upFirst) &&
+            (identical(other.upLast, upLast) || other.upLast == upLast) &&
+            (identical(other.downFirst, downFirst) ||
+                other.downFirst == downFirst) &&
+            (identical(other.downLast, downLast) ||
+                other.downLast == downLast));
   }
 
   @JsonKey(ignore: true)
@@ -209,10 +209,10 @@ class _$_FiltedArrivalModel implements _FiltedArrivalModel {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_arrival),
-      upfirst,
-      uplast,
-      downfirst,
-      downlast);
+      upFirst,
+      upLast,
+      downFirst,
+      downLast);
 
   @JsonKey(ignore: true)
   @override
@@ -232,10 +232,10 @@ class _$_FiltedArrivalModel implements _FiltedArrivalModel {
 abstract class _FiltedArrivalModel implements FiltedArrivalModel {
   const factory _FiltedArrivalModel(
       {final List<ArrivalModel>? arrival,
-      final String? upfirst,
-      final String? uplast,
-      final String? downfirst,
-      final String? downlast}) = _$_FiltedArrivalModel;
+      final String? upFirst,
+      final String? upLast,
+      final String? downFirst,
+      final String? downLast}) = _$_FiltedArrivalModel;
 
   factory _FiltedArrivalModel.fromJson(Map<String, dynamic> json) =
       _$_FiltedArrivalModel.fromJson;
@@ -243,13 +243,13 @@ abstract class _FiltedArrivalModel implements FiltedArrivalModel {
   @override
   List<ArrivalModel>? get arrival;
   @override
-  String? get upfirst;
+  String? get upFirst;
   @override
-  String? get uplast;
+  String? get upLast;
   @override
-  String? get downfirst;
+  String? get downFirst;
   @override
-  String? get downlast;
+  String? get downLast;
   @override
   @JsonKey(ignore: true)
   _$$_FiltedArrivalModelCopyWith<_$_FiltedArrivalModel> get copyWith =>

@@ -11,7 +11,7 @@ part 'code_model.g.dart';
 class CodeModel with _$CodeModel{
   const factory CodeModel({
     @Default("정보없음") @JsonKey(name: 'STATION_CD') String stationCd,
-    @Default("정보없음") @JsonKey(name: 'STATION_NM') String subname,
+    @Default("정보없음") @JsonKey(name: 'STATION_NM') String name,
     @Default("정보없음") @JsonKey(name: 'LINE_NUM') String line,
     @Default("정보없음") @JsonKey(name: 'FR_CODE') String code,
   }) = _CodeModel;

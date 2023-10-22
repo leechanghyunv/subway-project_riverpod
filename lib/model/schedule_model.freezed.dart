@@ -21,17 +21,17 @@ TableModel _$TableModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TableModel {
   @JsonKey(name: 'STATION_CD')
-  String get stationcd => throw _privateConstructorUsedError;
+  String get stationCd => throw _privateConstructorUsedError;
   @JsonKey(name: 'STATION_NM')
-  String get stationnm => throw _privateConstructorUsedError;
+  String get stationNm => throw _privateConstructorUsedError;
   @JsonKey(name: 'ARRIVETIME')
-  String get arrivetime => throw _privateConstructorUsedError;
+  String get arriveTime => throw _privateConstructorUsedError;
   @JsonKey(name: 'ORIGINSTATION')
-  String get originstation => throw _privateConstructorUsedError;
+  String get originStation => throw _privateConstructorUsedError;
   @JsonKey(name: 'SUBWAYSNAME')
-  String get sname => throw _privateConstructorUsedError;
+  String get sName => throw _privateConstructorUsedError;
   @JsonKey(name: 'SUBWAYENAME')
-  String get ename => throw _privateConstructorUsedError;
+  String get eName => throw _privateConstructorUsedError;
   @JsonKey(name: 'EXPRESS_YN')
   EXPRESS get express => throw _privateConstructorUsedError;
 
@@ -48,12 +48,12 @@ abstract class $TableModelCopyWith<$Res> {
       _$TableModelCopyWithImpl<$Res, TableModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'STATION_CD') String stationcd,
-      @JsonKey(name: 'STATION_NM') String stationnm,
-      @JsonKey(name: 'ARRIVETIME') String arrivetime,
-      @JsonKey(name: 'ORIGINSTATION') String originstation,
-      @JsonKey(name: 'SUBWAYSNAME') String sname,
-      @JsonKey(name: 'SUBWAYENAME') String ename,
+      {@JsonKey(name: 'STATION_CD') String stationCd,
+      @JsonKey(name: 'STATION_NM') String stationNm,
+      @JsonKey(name: 'ARRIVETIME') String arriveTime,
+      @JsonKey(name: 'ORIGINSTATION') String originStation,
+      @JsonKey(name: 'SUBWAYSNAME') String sName,
+      @JsonKey(name: 'SUBWAYENAME') String eName,
       @JsonKey(name: 'EXPRESS_YN') EXPRESS express});
 }
 
@@ -70,38 +70,38 @@ class _$TableModelCopyWithImpl<$Res, $Val extends TableModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? stationcd = null,
-    Object? stationnm = null,
-    Object? arrivetime = null,
-    Object? originstation = null,
-    Object? sname = null,
-    Object? ename = null,
+    Object? stationCd = null,
+    Object? stationNm = null,
+    Object? arriveTime = null,
+    Object? originStation = null,
+    Object? sName = null,
+    Object? eName = null,
     Object? express = null,
   }) {
     return _then(_value.copyWith(
-      stationcd: null == stationcd
-          ? _value.stationcd
-          : stationcd // ignore: cast_nullable_to_non_nullable
+      stationCd: null == stationCd
+          ? _value.stationCd
+          : stationCd // ignore: cast_nullable_to_non_nullable
               as String,
-      stationnm: null == stationnm
-          ? _value.stationnm
-          : stationnm // ignore: cast_nullable_to_non_nullable
+      stationNm: null == stationNm
+          ? _value.stationNm
+          : stationNm // ignore: cast_nullable_to_non_nullable
               as String,
-      arrivetime: null == arrivetime
-          ? _value.arrivetime
-          : arrivetime // ignore: cast_nullable_to_non_nullable
+      arriveTime: null == arriveTime
+          ? _value.arriveTime
+          : arriveTime // ignore: cast_nullable_to_non_nullable
               as String,
-      originstation: null == originstation
-          ? _value.originstation
-          : originstation // ignore: cast_nullable_to_non_nullable
+      originStation: null == originStation
+          ? _value.originStation
+          : originStation // ignore: cast_nullable_to_non_nullable
               as String,
-      sname: null == sname
-          ? _value.sname
-          : sname // ignore: cast_nullable_to_non_nullable
+      sName: null == sName
+          ? _value.sName
+          : sName // ignore: cast_nullable_to_non_nullable
               as String,
-      ename: null == ename
-          ? _value.ename
-          : ename // ignore: cast_nullable_to_non_nullable
+      eName: null == eName
+          ? _value.eName
+          : eName // ignore: cast_nullable_to_non_nullable
               as String,
       express: null == express
           ? _value.express
@@ -120,12 +120,12 @@ abstract class _$$_TableModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'STATION_CD') String stationcd,
-      @JsonKey(name: 'STATION_NM') String stationnm,
-      @JsonKey(name: 'ARRIVETIME') String arrivetime,
-      @JsonKey(name: 'ORIGINSTATION') String originstation,
-      @JsonKey(name: 'SUBWAYSNAME') String sname,
-      @JsonKey(name: 'SUBWAYENAME') String ename,
+      {@JsonKey(name: 'STATION_CD') String stationCd,
+      @JsonKey(name: 'STATION_NM') String stationNm,
+      @JsonKey(name: 'ARRIVETIME') String arriveTime,
+      @JsonKey(name: 'ORIGINSTATION') String originStation,
+      @JsonKey(name: 'SUBWAYSNAME') String sName,
+      @JsonKey(name: 'SUBWAYENAME') String eName,
       @JsonKey(name: 'EXPRESS_YN') EXPRESS express});
 }
 
@@ -140,38 +140,38 @@ class __$$_TableModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? stationcd = null,
-    Object? stationnm = null,
-    Object? arrivetime = null,
-    Object? originstation = null,
-    Object? sname = null,
-    Object? ename = null,
+    Object? stationCd = null,
+    Object? stationNm = null,
+    Object? arriveTime = null,
+    Object? originStation = null,
+    Object? sName = null,
+    Object? eName = null,
     Object? express = null,
   }) {
     return _then(_$_TableModel(
-      stationcd: null == stationcd
-          ? _value.stationcd
-          : stationcd // ignore: cast_nullable_to_non_nullable
+      stationCd: null == stationCd
+          ? _value.stationCd
+          : stationCd // ignore: cast_nullable_to_non_nullable
               as String,
-      stationnm: null == stationnm
-          ? _value.stationnm
-          : stationnm // ignore: cast_nullable_to_non_nullable
+      stationNm: null == stationNm
+          ? _value.stationNm
+          : stationNm // ignore: cast_nullable_to_non_nullable
               as String,
-      arrivetime: null == arrivetime
-          ? _value.arrivetime
-          : arrivetime // ignore: cast_nullable_to_non_nullable
+      arriveTime: null == arriveTime
+          ? _value.arriveTime
+          : arriveTime // ignore: cast_nullable_to_non_nullable
               as String,
-      originstation: null == originstation
-          ? _value.originstation
-          : originstation // ignore: cast_nullable_to_non_nullable
+      originStation: null == originStation
+          ? _value.originStation
+          : originStation // ignore: cast_nullable_to_non_nullable
               as String,
-      sname: null == sname
-          ? _value.sname
-          : sname // ignore: cast_nullable_to_non_nullable
+      sName: null == sName
+          ? _value.sName
+          : sName // ignore: cast_nullable_to_non_nullable
               as String,
-      ename: null == ename
-          ? _value.ename
-          : ename // ignore: cast_nullable_to_non_nullable
+      eName: null == eName
+          ? _value.eName
+          : eName // ignore: cast_nullable_to_non_nullable
               as String,
       express: null == express
           ? _value.express
@@ -185,12 +185,12 @@ class __$$_TableModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TableModel implements _TableModel {
   const _$_TableModel(
-      {@JsonKey(name: 'STATION_CD') this.stationcd = "정보없음",
-      @JsonKey(name: 'STATION_NM') this.stationnm = "정보없음",
-      @JsonKey(name: 'ARRIVETIME') this.arrivetime = "정보없음",
-      @JsonKey(name: 'ORIGINSTATION') this.originstation = "정보없음",
-      @JsonKey(name: 'SUBWAYSNAME') this.sname = "정보없음",
-      @JsonKey(name: 'SUBWAYENAME') this.ename = "정보없음",
+      {@JsonKey(name: 'STATION_CD') this.stationCd = "정보없음",
+      @JsonKey(name: 'STATION_NM') this.stationNm = "정보없음",
+      @JsonKey(name: 'ARRIVETIME') this.arriveTime = "정보없음",
+      @JsonKey(name: 'ORIGINSTATION') this.originStation = "정보없음",
+      @JsonKey(name: 'SUBWAYSNAME') this.sName = "정보없음",
+      @JsonKey(name: 'SUBWAYENAME') this.eName = "정보없음",
       @JsonKey(name: 'EXPRESS_YN') this.express = EXPRESS.GENERAL});
 
   factory _$_TableModel.fromJson(Map<String, dynamic> json) =>
@@ -198,29 +198,29 @@ class _$_TableModel implements _TableModel {
 
   @override
   @JsonKey(name: 'STATION_CD')
-  final String stationcd;
+  final String stationCd;
   @override
   @JsonKey(name: 'STATION_NM')
-  final String stationnm;
+  final String stationNm;
   @override
   @JsonKey(name: 'ARRIVETIME')
-  final String arrivetime;
+  final String arriveTime;
   @override
   @JsonKey(name: 'ORIGINSTATION')
-  final String originstation;
+  final String originStation;
   @override
   @JsonKey(name: 'SUBWAYSNAME')
-  final String sname;
+  final String sName;
   @override
   @JsonKey(name: 'SUBWAYENAME')
-  final String ename;
+  final String eName;
   @override
   @JsonKey(name: 'EXPRESS_YN')
   final EXPRESS express;
 
   @override
   String toString() {
-    return 'TableModel(stationcd: $stationcd, stationnm: $stationnm, arrivetime: $arrivetime, originstation: $originstation, sname: $sname, ename: $ename, express: $express)';
+    return 'TableModel(stationCd: $stationCd, stationNm: $stationNm, arriveTime: $arriveTime, originStation: $originStation, sName: $sName, eName: $eName, express: $express)';
   }
 
   @override
@@ -228,23 +228,23 @@ class _$_TableModel implements _TableModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_TableModel &&
-            (identical(other.stationcd, stationcd) ||
-                other.stationcd == stationcd) &&
-            (identical(other.stationnm, stationnm) ||
-                other.stationnm == stationnm) &&
-            (identical(other.arrivetime, arrivetime) ||
-                other.arrivetime == arrivetime) &&
-            (identical(other.originstation, originstation) ||
-                other.originstation == originstation) &&
-            (identical(other.sname, sname) || other.sname == sname) &&
-            (identical(other.ename, ename) || other.ename == ename) &&
+            (identical(other.stationCd, stationCd) ||
+                other.stationCd == stationCd) &&
+            (identical(other.stationNm, stationNm) ||
+                other.stationNm == stationNm) &&
+            (identical(other.arriveTime, arriveTime) ||
+                other.arriveTime == arriveTime) &&
+            (identical(other.originStation, originStation) ||
+                other.originStation == originStation) &&
+            (identical(other.sName, sName) || other.sName == sName) &&
+            (identical(other.eName, eName) || other.eName == eName) &&
             (identical(other.express, express) || other.express == express));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, stationcd, stationnm, arrivetime,
-      originstation, sname, ename, express);
+  int get hashCode => Object.hash(runtimeType, stationCd, stationNm, arriveTime,
+      originStation, sName, eName, express);
 
   @JsonKey(ignore: true)
   @override
@@ -262,12 +262,12 @@ class _$_TableModel implements _TableModel {
 
 abstract class _TableModel implements TableModel {
   const factory _TableModel(
-      {@JsonKey(name: 'STATION_CD') final String stationcd,
-      @JsonKey(name: 'STATION_NM') final String stationnm,
-      @JsonKey(name: 'ARRIVETIME') final String arrivetime,
-      @JsonKey(name: 'ORIGINSTATION') final String originstation,
-      @JsonKey(name: 'SUBWAYSNAME') final String sname,
-      @JsonKey(name: 'SUBWAYENAME') final String ename,
+      {@JsonKey(name: 'STATION_CD') final String stationCd,
+      @JsonKey(name: 'STATION_NM') final String stationNm,
+      @JsonKey(name: 'ARRIVETIME') final String arriveTime,
+      @JsonKey(name: 'ORIGINSTATION') final String originStation,
+      @JsonKey(name: 'SUBWAYSNAME') final String sName,
+      @JsonKey(name: 'SUBWAYENAME') final String eName,
       @JsonKey(name: 'EXPRESS_YN') final EXPRESS express}) = _$_TableModel;
 
   factory _TableModel.fromJson(Map<String, dynamic> json) =
@@ -275,22 +275,22 @@ abstract class _TableModel implements TableModel {
 
   @override
   @JsonKey(name: 'STATION_CD')
-  String get stationcd;
+  String get stationCd;
   @override
   @JsonKey(name: 'STATION_NM')
-  String get stationnm;
+  String get stationNm;
   @override
   @JsonKey(name: 'ARRIVETIME')
-  String get arrivetime;
+  String get arriveTime;
   @override
   @JsonKey(name: 'ORIGINSTATION')
-  String get originstation;
+  String get originStation;
   @override
   @JsonKey(name: 'SUBWAYSNAME')
-  String get sname;
+  String get sName;
   @override
   @JsonKey(name: 'SUBWAYENAME')
-  String get ename;
+  String get eName;
   @override
   @JsonKey(name: 'EXPRESS_YN')
   EXPRESS get express;

@@ -7,12 +7,12 @@ part 'schedule_model.freezed.dart';
 @Freezed()
 class TableModel with _$TableModel{
   const factory TableModel({
-    @Default("정보없음") @JsonKey(name: 'STATION_CD') String stationcd,
-    @Default("정보없음") @JsonKey(name: 'STATION_NM') String stationnm,
-    @Default("정보없음") @JsonKey(name: 'ARRIVETIME')  String arrivetime,
-    @Default("정보없음") @JsonKey(name: 'ORIGINSTATION') String originstation,
-    @Default("정보없음") @JsonKey(name: 'SUBWAYSNAME') String sname,
-    @Default("정보없음") @JsonKey(name: 'SUBWAYENAME') String ename,
+    @Default("정보없음") @JsonKey(name: 'STATION_CD') String stationCd,
+    @Default("정보없음") @JsonKey(name: 'STATION_NM') String stationNm,
+    @Default("정보없음") @JsonKey(name: 'ARRIVETIME')  String arriveTime,
+    @Default("정보없음") @JsonKey(name: 'ORIGINSTATION') String originStation,
+    @Default("정보없음") @JsonKey(name: 'SUBWAYSNAME') String sName,
+    @Default("정보없음") @JsonKey(name: 'SUBWAYENAME') String eName,
     @Default(EXPRESS.GENERAL) @JsonKey(name: 'EXPRESS_YN') EXPRESS express,
   }) = _TableModel;
   factory TableModel.fromJson(Map<String, Object?> json) => _$TableModelFromJson(json);

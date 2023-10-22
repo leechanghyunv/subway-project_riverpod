@@ -23,7 +23,7 @@ mixin _$CodeModel {
   @JsonKey(name: 'STATION_CD')
   String get stationCd => throw _privateConstructorUsedError;
   @JsonKey(name: 'STATION_NM')
-  String get subname => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'LINE_NUM')
   String get line => throw _privateConstructorUsedError;
   @JsonKey(name: 'FR_CODE')
@@ -42,7 +42,7 @@ abstract class $CodeModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'STATION_CD') String stationCd,
-      @JsonKey(name: 'STATION_NM') String subname,
+      @JsonKey(name: 'STATION_NM') String name,
       @JsonKey(name: 'LINE_NUM') String line,
       @JsonKey(name: 'FR_CODE') String code});
 }
@@ -61,7 +61,7 @@ class _$CodeModelCopyWithImpl<$Res, $Val extends CodeModel>
   @override
   $Res call({
     Object? stationCd = null,
-    Object? subname = null,
+    Object? name = null,
     Object? line = null,
     Object? code = null,
   }) {
@@ -70,9 +70,9 @@ class _$CodeModelCopyWithImpl<$Res, $Val extends CodeModel>
           ? _value.stationCd
           : stationCd // ignore: cast_nullable_to_non_nullable
               as String,
-      subname: null == subname
-          ? _value.subname
-          : subname // ignore: cast_nullable_to_non_nullable
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String,
       line: null == line
           ? _value.line
@@ -95,7 +95,7 @@ abstract class _$$_CodeModelCopyWith<$Res> implements $CodeModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'STATION_CD') String stationCd,
-      @JsonKey(name: 'STATION_NM') String subname,
+      @JsonKey(name: 'STATION_NM') String name,
       @JsonKey(name: 'LINE_NUM') String line,
       @JsonKey(name: 'FR_CODE') String code});
 }
@@ -112,7 +112,7 @@ class __$$_CodeModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? stationCd = null,
-    Object? subname = null,
+    Object? name = null,
     Object? line = null,
     Object? code = null,
   }) {
@@ -121,9 +121,9 @@ class __$$_CodeModelCopyWithImpl<$Res>
           ? _value.stationCd
           : stationCd // ignore: cast_nullable_to_non_nullable
               as String,
-      subname: null == subname
-          ? _value.subname
-          : subname // ignore: cast_nullable_to_non_nullable
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String,
       line: null == line
           ? _value.line
@@ -142,7 +142,7 @@ class __$$_CodeModelCopyWithImpl<$Res>
 class _$_CodeModel implements _CodeModel {
   const _$_CodeModel(
       {@JsonKey(name: 'STATION_CD') this.stationCd = "정보없음",
-      @JsonKey(name: 'STATION_NM') this.subname = "정보없음",
+      @JsonKey(name: 'STATION_NM') this.name = "정보없음",
       @JsonKey(name: 'LINE_NUM') this.line = "정보없음",
       @JsonKey(name: 'FR_CODE') this.code = "정보없음"});
 
@@ -154,7 +154,7 @@ class _$_CodeModel implements _CodeModel {
   final String stationCd;
   @override
   @JsonKey(name: 'STATION_NM')
-  final String subname;
+  final String name;
   @override
   @JsonKey(name: 'LINE_NUM')
   final String line;
@@ -164,7 +164,7 @@ class _$_CodeModel implements _CodeModel {
 
   @override
   String toString() {
-    return 'CodeModel(stationCd: $stationCd, subname: $subname, line: $line, code: $code)';
+    return 'CodeModel(stationCd: $stationCd, name: $name, line: $line, code: $code)';
   }
 
   @override
@@ -174,14 +174,14 @@ class _$_CodeModel implements _CodeModel {
             other is _$_CodeModel &&
             (identical(other.stationCd, stationCd) ||
                 other.stationCd == stationCd) &&
-            (identical(other.subname, subname) || other.subname == subname) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.line, line) || other.line == line) &&
             (identical(other.code, code) || other.code == code));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, stationCd, subname, line, code);
+  int get hashCode => Object.hash(runtimeType, stationCd, name, line, code);
 
   @JsonKey(ignore: true)
   @override
@@ -200,7 +200,7 @@ class _$_CodeModel implements _CodeModel {
 abstract class _CodeModel implements CodeModel {
   const factory _CodeModel(
       {@JsonKey(name: 'STATION_CD') final String stationCd,
-      @JsonKey(name: 'STATION_NM') final String subname,
+      @JsonKey(name: 'STATION_NM') final String name,
       @JsonKey(name: 'LINE_NUM') final String line,
       @JsonKey(name: 'FR_CODE') final String code}) = _$_CodeModel;
 
@@ -212,7 +212,7 @@ abstract class _CodeModel implements CodeModel {
   String get stationCd;
   @override
   @JsonKey(name: 'STATION_NM')
-  String get subname;
+  String get name;
   @override
   @JsonKey(name: 'LINE_NUM')
   String get line;

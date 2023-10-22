@@ -44,10 +44,10 @@ class _TransferIconState extends ConsumerState<TransferIcon> {
                                       TextFrame(
                                         comment: '\n$lineTT $nameT역\n',
                                       ),
-                                      TextFrame(comment: data.upfirst.toString()),
-                                      TextFrame(comment: data.uplast.toString()),
-                                      TextFrame(comment: data.downfirst.toString()),
-                                      TextFrame(comment: data.downlast.toString()),
+                                      TextFrame(comment: data.upFirst.toString()),
+                                      TextFrame(comment: data.upLast.toString()),
+                                      TextFrame(comment: data.downFirst.toString()),
+                                      TextFrame(comment: data.downLast.toString()),
                                     ],
                                   );
                                 },

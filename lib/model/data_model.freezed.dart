@@ -20,12 +20,12 @@ SubwayModel _$SubwayModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SubwayModel {
-  String get subname => throw _privateConstructorUsedError;
-  String get engname => throw _privateConstructorUsedError;
+  String get subName => throw _privateConstructorUsedError;
+  String get engName => throw _privateConstructorUsedError;
   double get lat => throw _privateConstructorUsedError;
   double get lng => throw _privateConstructorUsedError;
-  String get line_ui => throw _privateConstructorUsedError;
-  int get subwayid => throw _privateConstructorUsedError;
+  String get lineUi => throw _privateConstructorUsedError;
+  int get subwayId => throw _privateConstructorUsedError;
   String get line => throw _privateConstructorUsedError;
   String get heading => throw _privateConstructorUsedError;
   bool? get isSelected => throw _privateConstructorUsedError;
@@ -44,12 +44,12 @@ abstract class $SubwayModelCopyWith<$Res> {
       _$SubwayModelCopyWithImpl<$Res, SubwayModel>;
   @useResult
   $Res call(
-      {String subname,
-      String engname,
+      {String subName,
+      String engName,
       double lat,
       double lng,
-      String line_ui,
-      int subwayid,
+      String lineUi,
+      int subwayId,
       String line,
       String heading,
       bool? isSelected,
@@ -69,25 +69,25 @@ class _$SubwayModelCopyWithImpl<$Res, $Val extends SubwayModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? subname = null,
-    Object? engname = null,
+    Object? subName = null,
+    Object? engName = null,
     Object? lat = null,
     Object? lng = null,
-    Object? line_ui = null,
-    Object? subwayid = null,
+    Object? lineUi = null,
+    Object? subwayId = null,
     Object? line = null,
     Object? heading = null,
     Object? isSelected = freezed,
     Object? km = freezed,
   }) {
     return _then(_value.copyWith(
-      subname: null == subname
-          ? _value.subname
-          : subname // ignore: cast_nullable_to_non_nullable
+      subName: null == subName
+          ? _value.subName
+          : subName // ignore: cast_nullable_to_non_nullable
               as String,
-      engname: null == engname
-          ? _value.engname
-          : engname // ignore: cast_nullable_to_non_nullable
+      engName: null == engName
+          ? _value.engName
+          : engName // ignore: cast_nullable_to_non_nullable
               as String,
       lat: null == lat
           ? _value.lat
@@ -97,13 +97,13 @@ class _$SubwayModelCopyWithImpl<$Res, $Val extends SubwayModel>
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
               as double,
-      line_ui: null == line_ui
-          ? _value.line_ui
-          : line_ui // ignore: cast_nullable_to_non_nullable
+      lineUi: null == lineUi
+          ? _value.lineUi
+          : lineUi // ignore: cast_nullable_to_non_nullable
               as String,
-      subwayid: null == subwayid
-          ? _value.subwayid
-          : subwayid // ignore: cast_nullable_to_non_nullable
+      subwayId: null == subwayId
+          ? _value.subwayId
+          : subwayId // ignore: cast_nullable_to_non_nullable
               as int,
       line: null == line
           ? _value.line
@@ -134,12 +134,12 @@ abstract class _$$_SubwayModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String subname,
-      String engname,
+      {String subName,
+      String engName,
       double lat,
       double lng,
-      String line_ui,
-      int subwayid,
+      String lineUi,
+      int subwayId,
       String line,
       String heading,
       bool? isSelected,
@@ -157,25 +157,25 @@ class __$$_SubwayModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? subname = null,
-    Object? engname = null,
+    Object? subName = null,
+    Object? engName = null,
     Object? lat = null,
     Object? lng = null,
-    Object? line_ui = null,
-    Object? subwayid = null,
+    Object? lineUi = null,
+    Object? subwayId = null,
     Object? line = null,
     Object? heading = null,
     Object? isSelected = freezed,
     Object? km = freezed,
   }) {
     return _then(_$_SubwayModel(
-      subname: null == subname
-          ? _value.subname
-          : subname // ignore: cast_nullable_to_non_nullable
+      subName: null == subName
+          ? _value.subName
+          : subName // ignore: cast_nullable_to_non_nullable
               as String,
-      engname: null == engname
-          ? _value.engname
-          : engname // ignore: cast_nullable_to_non_nullable
+      engName: null == engName
+          ? _value.engName
+          : engName // ignore: cast_nullable_to_non_nullable
               as String,
       lat: null == lat
           ? _value.lat
@@ -185,13 +185,13 @@ class __$$_SubwayModelCopyWithImpl<$Res>
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
               as double,
-      line_ui: null == line_ui
-          ? _value.line_ui
-          : line_ui // ignore: cast_nullable_to_non_nullable
+      lineUi: null == lineUi
+          ? _value.lineUi
+          : lineUi // ignore: cast_nullable_to_non_nullable
               as String,
-      subwayid: null == subwayid
-          ? _value.subwayid
-          : subwayid // ignore: cast_nullable_to_non_nullable
+      subwayId: null == subwayId
+          ? _value.subwayId
+          : subwayId // ignore: cast_nullable_to_non_nullable
               as int,
       line: null == line
           ? _value.line
@@ -217,12 +217,12 @@ class __$$_SubwayModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubwayModel implements _SubwayModel {
   const _$_SubwayModel(
-      {required this.subname,
-      required this.engname,
+      {required this.subName,
+      required this.engName,
       required this.lat,
       required this.lng,
-      required this.line_ui,
-      required this.subwayid,
+      required this.lineUi,
+      required this.subwayId,
       required this.line,
       required this.heading,
       this.isSelected = false,
@@ -232,17 +232,17 @@ class _$_SubwayModel implements _SubwayModel {
       _$$_SubwayModelFromJson(json);
 
   @override
-  final String subname;
+  final String subName;
   @override
-  final String engname;
+  final String engName;
   @override
   final double lat;
   @override
   final double lng;
   @override
-  final String line_ui;
+  final String lineUi;
   @override
-  final int subwayid;
+  final int subwayId;
   @override
   final String line;
   @override
@@ -256,7 +256,7 @@ class _$_SubwayModel implements _SubwayModel {
 
   @override
   String toString() {
-    return 'SubwayModel(subname: $subname, engname: $engname, lat: $lat, lng: $lng, line_ui: $line_ui, subwayid: $subwayid, line: $line, heading: $heading, isSelected: $isSelected, km: $km)';
+    return 'SubwayModel(subName: $subName, engName: $engName, lat: $lat, lng: $lng, lineUi: $lineUi, subwayId: $subwayId, line: $line, heading: $heading, isSelected: $isSelected, km: $km)';
   }
 
   @override
@@ -264,13 +264,13 @@ class _$_SubwayModel implements _SubwayModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SubwayModel &&
-            (identical(other.subname, subname) || other.subname == subname) &&
-            (identical(other.engname, engname) || other.engname == engname) &&
+            (identical(other.subName, subName) || other.subName == subName) &&
+            (identical(other.engName, engName) || other.engName == engName) &&
             (identical(other.lat, lat) || other.lat == lat) &&
             (identical(other.lng, lng) || other.lng == lng) &&
-            (identical(other.line_ui, line_ui) || other.line_ui == line_ui) &&
-            (identical(other.subwayid, subwayid) ||
-                other.subwayid == subwayid) &&
+            (identical(other.lineUi, lineUi) || other.lineUi == lineUi) &&
+            (identical(other.subwayId, subwayId) ||
+                other.subwayId == subwayId) &&
             (identical(other.line, line) || other.line == line) &&
             (identical(other.heading, heading) || other.heading == heading) &&
             (identical(other.isSelected, isSelected) ||
@@ -280,8 +280,8 @@ class _$_SubwayModel implements _SubwayModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, subname, engname, lat, lng,
-      line_ui, subwayid, line, heading, isSelected, km);
+  int get hashCode => Object.hash(runtimeType, subName, engName, lat, lng,
+      lineUi, subwayId, line, heading, isSelected, km);
 
   @JsonKey(ignore: true)
   @override
@@ -299,12 +299,12 @@ class _$_SubwayModel implements _SubwayModel {
 
 abstract class _SubwayModel implements SubwayModel {
   const factory _SubwayModel(
-      {required final String subname,
-      required final String engname,
+      {required final String subName,
+      required final String engName,
       required final double lat,
       required final double lng,
-      required final String line_ui,
-      required final int subwayid,
+      required final String lineUi,
+      required final int subwayId,
       required final String line,
       required final String heading,
       final bool? isSelected,
@@ -314,17 +314,17 @@ abstract class _SubwayModel implements SubwayModel {
       _$_SubwayModel.fromJson;
 
   @override
-  String get subname;
+  String get subName;
   @override
-  String get engname;
+  String get engName;
   @override
   double get lat;
   @override
   double get lng;
   @override
-  String get line_ui;
+  String get lineUi;
   @override
-  int get subwayid;
+  int get subwayId;
   @override
   String get line;
   @override
