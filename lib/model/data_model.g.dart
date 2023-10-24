@@ -8,12 +8,12 @@ part of 'data_model.dart';
 
 _$_SubwayModel _$$_SubwayModelFromJson(Map<String, dynamic> json) =>
     _$_SubwayModel(
-      subName: json['subName'] as String,
-      engName: json['engName'] as String,
+      subName: json['subname'] as String,
+      engName: json['engname'] as String,
       lat: (json['lat'] as num).toDouble(),
       lng: (json['lng'] as num).toDouble(),
-      lineUi: json['lineUi'] as String,
-      subwayId: json['subwayId'] as int,
+      lineUi: json['line_ui'] as String,
+      subwayId: json['subwayid'] as int,
       line: json['line'] as String,
       heading: json['heading'] as String,
       isSelected: json['isSelected'] as bool? ?? false,
@@ -22,12 +22,12 @@ _$_SubwayModel _$$_SubwayModelFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SubwayModelToJson(_$_SubwayModel instance) =>
     <String, dynamic>{
-      'subName': instance.subName,
-      'engName': instance.engName,
+      'subname': instance.subName,
+      'engname': instance.engName,
       'lat': instance.lat,
       'lng': instance.lng,
-      'lineUi': instance.lineUi,
-      'subwayId': instance.subwayId,
+      'line_ui': instance.lineUi,
+      'subwayid': instance.subwayId,
       'line': instance.line,
       'heading': instance.heading,
       'isSelected': instance.isSelected,

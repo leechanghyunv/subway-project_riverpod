@@ -20,11 +20,15 @@ SubwayModel _$SubwayModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SubwayModel {
+  @JsonKey(name: 'subname')
   String get subName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'engname')
   String get engName => throw _privateConstructorUsedError;
   double get lat => throw _privateConstructorUsedError;
   double get lng => throw _privateConstructorUsedError;
+  @JsonKey(name: 'line_ui')
   String get lineUi => throw _privateConstructorUsedError;
+  @JsonKey(name: 'subwayid')
   int get subwayId => throw _privateConstructorUsedError;
   String get line => throw _privateConstructorUsedError;
   String get heading => throw _privateConstructorUsedError;
@@ -44,12 +48,12 @@ abstract class $SubwayModelCopyWith<$Res> {
       _$SubwayModelCopyWithImpl<$Res, SubwayModel>;
   @useResult
   $Res call(
-      {String subName,
-      String engName,
+      {@JsonKey(name: 'subname') String subName,
+      @JsonKey(name: 'engname') String engName,
       double lat,
       double lng,
-      String lineUi,
-      int subwayId,
+      @JsonKey(name: 'line_ui') String lineUi,
+      @JsonKey(name: 'subwayid') int subwayId,
       String line,
       String heading,
       bool? isSelected,
@@ -134,12 +138,12 @@ abstract class _$$_SubwayModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String subName,
-      String engName,
+      {@JsonKey(name: 'subname') String subName,
+      @JsonKey(name: 'engname') String engName,
       double lat,
       double lng,
-      String lineUi,
-      int subwayId,
+      @JsonKey(name: 'line_ui') String lineUi,
+      @JsonKey(name: 'subwayid') int subwayId,
       String line,
       String heading,
       bool? isSelected,
@@ -217,12 +221,12 @@ class __$$_SubwayModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubwayModel implements _SubwayModel {
   const _$_SubwayModel(
-      {required this.subName,
-      required this.engName,
+      {@JsonKey(name: 'subname') required this.subName,
+      @JsonKey(name: 'engname') required this.engName,
       required this.lat,
       required this.lng,
-      required this.lineUi,
-      required this.subwayId,
+      @JsonKey(name: 'line_ui') required this.lineUi,
+      @JsonKey(name: 'subwayid') required this.subwayId,
       required this.line,
       required this.heading,
       this.isSelected = false,
@@ -232,16 +236,20 @@ class _$_SubwayModel implements _SubwayModel {
       _$$_SubwayModelFromJson(json);
 
   @override
+  @JsonKey(name: 'subname')
   final String subName;
   @override
+  @JsonKey(name: 'engname')
   final String engName;
   @override
   final double lat;
   @override
   final double lng;
   @override
+  @JsonKey(name: 'line_ui')
   final String lineUi;
   @override
+  @JsonKey(name: 'subwayid')
   final int subwayId;
   @override
   final String line;
@@ -299,12 +307,12 @@ class _$_SubwayModel implements _SubwayModel {
 
 abstract class _SubwayModel implements SubwayModel {
   const factory _SubwayModel(
-      {required final String subName,
-      required final String engName,
+      {@JsonKey(name: 'subname') required final String subName,
+      @JsonKey(name: 'engname') required final String engName,
       required final double lat,
       required final double lng,
-      required final String lineUi,
-      required final int subwayId,
+      @JsonKey(name: 'line_ui') required final String lineUi,
+      @JsonKey(name: 'subwayid') required final int subwayId,
       required final String line,
       required final String heading,
       final bool? isSelected,
@@ -314,16 +322,20 @@ abstract class _SubwayModel implements SubwayModel {
       _$_SubwayModel.fromJson;
 
   @override
+  @JsonKey(name: 'subname')
   String get subName;
   @override
+  @JsonKey(name: 'engname')
   String get engName;
   @override
   double get lat;
   @override
   double get lng;
   @override
+  @JsonKey(name: 'line_ui')
   String get lineUi;
   @override
+  @JsonKey(name: 'subwayid')
   int get subwayId;
   @override
   String get line;

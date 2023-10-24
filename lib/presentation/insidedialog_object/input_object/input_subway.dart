@@ -23,12 +23,19 @@ class InputSubway extends StatelessWidget {
     return Consumer(
         builder: (context, ref, child){
           final subwayData = ref.watch(dataProviderInside);
+          print(subwayData);
           return subwayData.when(
             loading: () => Container(
                 width: 61.w,
                 height: 15.6.w,
                 child: TextFrame(comment: 'Loading.....')),
-            error: (err, stack) => Text(err.toString()),
+            error: (err, stack) =>
+                Container(
+                  width: 61.w,
+                  height: 15.6.w,
+                  child: TextFrame(comment: err.toString()),
+            ),
+            /// err.toString()
             data: (data) {
               final filteredname = data.map((e) => e.subName).toSet().toList();
               return Container(
