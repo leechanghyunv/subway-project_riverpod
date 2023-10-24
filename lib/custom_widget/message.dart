@@ -9,7 +9,7 @@ Future<String> fetchData() async {
 
 Future<bool?> savemsg(String position, String name, String ename) async => await
 Fluttertoast.showToast(
-        msg:'${position} ${name}역 저장되었습니다.\n${ename}',
+        msg:'$position $name역 저장되었습니다.\n$ename',
         gravity: ToastGravity.CENTER);
 
 Future<bool?> savemsg2(String name) async => await

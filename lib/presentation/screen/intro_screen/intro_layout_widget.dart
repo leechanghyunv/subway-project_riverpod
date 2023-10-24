@@ -288,21 +288,23 @@ Widget Row2() => Row(
   ],
 );
 
+
+
 Widget Container_Left() => Container(
   width: 15.w,
-  height: Device.aspectRatio >= 0.5 ? 12.h : 11.5.h,
+  height: Device.aspectRatio >= 0.5 ? 12.h : 11.h,
   color: Colors.transparent,
 );
 Widget Container_Right(key) => Container(
   key: key,
   width: 15.w,
-  height: Device.aspectRatio >= 0.5 ? 12.h : 11.5.h,
+  height: Device.aspectRatio >= 0.5 ? 12.h : 11.h,
   color: Colors.transparent,
 );
 Widget BottomForIntro() => Container(
     alignment: Alignment.center,
     width: 55.w,
-    height: Device.aspectRatio >= 0.5 ? 12.h : 11.5.h,
+    height: Device.aspectRatio >= 0.5 ? 12.h : 11.h,
     child: BarcodeWidget(
       data: '------LAFAYETTE.co-------',
       style: TextStyle(

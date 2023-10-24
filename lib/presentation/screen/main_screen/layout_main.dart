@@ -29,7 +29,7 @@ Widget Layout_Main(
                     const DottedLine(
                       dashLength: 12, dashGapLength: 6, lineThickness: 7,
                     ),
-                Row(
+                    Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       colorBar, ///

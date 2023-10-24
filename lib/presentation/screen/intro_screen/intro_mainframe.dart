@@ -27,7 +27,7 @@ Widget IntroLayer_main(iconSize,key1,key2,key3,key4,key5,key6)
                   Column(
                     children: [
                       SizedBox(
-                        height: 3.h,
+                        height: 6.w,
                       ),
                       Container(
                         height: 52.h,
