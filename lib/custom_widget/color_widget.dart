@@ -12,7 +12,7 @@ Widget PickerIcon(String line) =>
     );
 
 Widget TransferIconB() => Icon(Icons.cached_rounded,
-  color: headingColor(box.read('lineT')),
+  color: headingColor(box.read('lineT') ?? ''),
   size: 6.w,
 );
 
@@ -39,5 +39,5 @@ Color headingColor (String heading) {
       : heading == '의정부' ? Color(0xffFDA600)
       : heading == '우이신설' ? Color(0xffB7C452)
       : heading == '김포골드' ? Color(0xffA17800)
-      : Color(0xff6789CA); /// 신림
+      : Colors.black; /// 신림
 }
