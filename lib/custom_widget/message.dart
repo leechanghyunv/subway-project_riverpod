@@ -1,6 +1,7 @@
 // Project imports:
 import 'package:subway_project_230704/setting/export.dart';
 import '../presentation/screen/screen_controller.dart';
+import '../setting/get_value_setting.dart';
 
 Future<String> fetchData() async {
   await Future.delayed(Duration(milliseconds: 1100));
@@ -19,12 +20,12 @@ Fluttertoast.showToast(
 
 Future<bool?> tablemsg(String eng,String name) async => await
 Fluttertoast.showToast(
-        msg:'${eng} ${name}',
+        msg:'$eng $name',
         gravity: ToastGravity.CENTER);
 
 Future<bool?> tableLast(String name) async => await
 Fluttertoast.showToast(
-        msg:'${name}역 막차 시간표로 이동합니다.',
+        msg:'$name역 막차 시간표로 이동합니다.',
         gravity: ToastGravity.CENTER);
 
 Future<bool?> serveymsg() async => await
@@ -34,13 +35,24 @@ Fluttertoast.showToast(
 
 Future<bool?> Select(String name) async => await
 Fluttertoast.showToast(
-        msg:'${name}역을 선택하셨습니다',
+        msg:'$name역을 선택하셨습니다',
         gravity: ToastGravity.CENTER);
 
 Future<bool?> showmsg() => Fluttertoast.showToast(
     msg:'목적지를 입력해주세요',
     gravity: ToastGravity.CENTER);
 
+Future<bool?> routemsg() => Fluttertoast.showToast(
+    msg:'이동경로가 삭제되었습니다.',
+    gravity: ToastGravity.CENTER);
+
+Future<bool?> saveroutemmsg() => Fluttertoast.showToast(
+    msg:'($nameB - $nameA)\n이동경로가 저장되었습니다.',
+    gravity: ToastGravity.CENTER);
+
+Future<bool?> recallroutemsg() => Fluttertoast.showToast(
+    msg:'이동경로가 지정되었습니다\n Adapt 버튼을 눌러주세요',
+    gravity: ToastGravity.CENTER);
 
 void accident(){
   if(box.read('accident') ?? true){

@@ -1,7 +1,6 @@
 // Project imports:
 import 'package:subway_project_230704/setting/export+.dart';
 import 'package:subway_project_230704/setting/export.dart';
-
 import '../../screen/screen_controller.dart';
 
 class TextContainerB extends ConsumerWidget {

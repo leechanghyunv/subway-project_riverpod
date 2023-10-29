@@ -113,3 +113,16 @@ final dropdown = TextStyle(
   fontSize: 3.62.w,
 );
 
+final subStyle = TextStyle(
+  color: Colors.grey[700],
+  fontWeight: FontWeight.bold,
+  fontSize: 3.3.w,
+  overflow: TextOverflow.ellipsis,
+);
+
+final subStyle1 = TextStyle(
+  color: Colors.black,
+  fontWeight: FontWeight.bold,
+  fontSize: 3.6.w,
+  overflow: TextOverflow.ellipsis,
+);

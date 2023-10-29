@@ -1,4 +1,6 @@
 // Project imports:
+import 'package:subway_project_230704/model/data_model.dart';
+import '../model/subFromHive_model.dart';
 import '../presentation/screen/screen_controller.dart';
 
 String get name => box.read('name') ?? '';
@@ -44,3 +46,14 @@ String get state2 => box.read('subState2') ?? '99';
 
 String get trainstate1 => box.read('state1') ?? 'NOR(S)';
 String get trainstate2 => box.read('state2') ?? 'NOR(S)';
+
+SubwayHiveModel get modelA => SubwayHiveModel(
+    subName: nameA, engName: engA, lat: latA, lng: lngA,
+    lineUi: lineA, subwayId: int.tryParse(sublistA) ?? 0000,
+    line: lineAA, heading: headA, code: codeA);
+
+SubwayHiveModel get modelB => SubwayHiveModel(
+    subName: nameB, engName: engB, lat: latB, lng: lngB,
+    lineUi: lineB, subwayId: int.tryParse(sublistB) ?? 0000,
+    line: lineBB, heading: headB, code: codeB);
+

@@ -1,7 +1,8 @@
 // Project imports:
 
-import '../../setting/export.dart';
+// Project imports:
 import '../../setting/export+.dart';
+import '../../setting/export.dart';
 import 'loading_screen/loading_main.dart';
 import 'main_screen/main_screen.dart';
 

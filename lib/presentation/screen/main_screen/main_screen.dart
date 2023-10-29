@@ -1,9 +1,11 @@
 // Project imports:
-import '../../../setting/export.dart';
+import 'package:subway_project_230704/model/route_model.dart';
+import '../../../data_provider/subordinate_provider/hive_route_provider.dart';
 import '../../../setting/export+.dart';
+import '../../../setting/export.dart';
 import '../screen_controller.dart';
-import 'layout_screen_widget.dart';
 import '../table_screen/timetable_screen.dart';
+import 'layout_screen_widget.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
@@ -185,8 +187,14 @@ class _HomePageState extends ConsumerState<HomePage> {
                   ),
                   actions: [
                     DialogButton(
-                      onPressed: () => Navigator.pop(context),
-                      comment: 'Cancel',
+                      onPressed: () async {
+                        final route = SubRouteModel(
+                            routeA: modelA, routeB: modelB,
+                        );
+                        await HiveRouteService.putRouteBox(route);
+                        saveroutemmsg();
+                      },
+                      comment: 'Save',
                     ),
                     DialogButton(
                       onPressed: (){
@@ -266,8 +274,14 @@ class _HomePageState extends ConsumerState<HomePage> {
                   ),
                   actions: [
                     DialogButton(
-                      onPressed: () => Navigator.pop(context),
-                      comment: 'Cancel',
+                      onPressed: (){
+                        final route = SubRouteModel(
+                          routeA: modelB, routeB: modelA,
+                        );
+                        HiveRouteService.putRouteBox(route);
+                        saveroutemmsg();
+                      },
+                      comment: 'Save',
                     ),
                       DialogButton(
                         onPressed: (){

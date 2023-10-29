@@ -2,8 +2,8 @@
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 
 // Project imports:
-import '../../../setting/export.dart';
 import '../../../setting/export+.dart';
+import '../../../setting/export.dart';
 import 'layout_main.dart';
 import 'layout_se.dart';
 

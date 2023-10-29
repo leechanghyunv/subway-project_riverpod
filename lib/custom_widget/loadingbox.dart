@@ -11,5 +11,12 @@ Widget LoadingBox(String text) => Container(
   child: TextFrame(comment: text),
 );
 
+Widget RouteBox(String text) => Container(
+  color: Colors.grey[200],
+  height: 53.w,
+  alignment: Alignment.center,
+  child: TextFrame(comment: text),
+);
+
 Widget SwitchLoading() => const Center(
     child: TextFrame(comment: 'loading.....'));

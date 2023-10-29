@@ -1,8 +1,8 @@
 // Project imports:
 import 'package:subway_project_230704/setting/export+.dart';
 import 'package:subway_project_230704/setting/export.dart';
-
 import '../../data_provider/subordinate_provider/weather_provider.dart';
+import '../insidedialog_object/route_button.dart';
 import '../screen/screen_controller.dart';
 
 /// 실시간 지하철 열차 정보를 보여주기 위한 부분임
@@ -27,6 +27,7 @@ class _SwitchDialogAState extends ConsumerState<SwitchDialogA> {
     super.initState();
     box.write('SubListId', widget.list);
     print('SubListId: ${box.read('SubListId')}');
+
   }
 
   @override
@@ -52,7 +53,9 @@ class _SwitchDialogAState extends ConsumerState<SwitchDialogA> {
                 width: double.maxFinite,
                 child: Consumer(
                     builder: (context,ref,child){
-                  final filted = ref.watch(filtedArrivalProvider(widget.list));
+                  final filted = ref.watch(
+                      filtedArrivalProvider(widget.list)
+                  );
                   return filted.when(
                     loading: () => LoadingBox('loading.....'),
                     error: (err,stack) => LoadingBox('데이터를 불러올 수 없습니다'),
@@ -103,7 +106,7 @@ class _SwitchDialogAState extends ConsumerState<SwitchDialogA> {
                   ),
                   const Expanded(child: Text('')),
                   /// 환승역에대한 정보를 저장하기 위한 구간임 사람들이 잘 안쓸것 같아 바꾸고싶음
-                  TransferIcon(),
+                  RouteSelectIcon(),
                 ],
               ),
           ),

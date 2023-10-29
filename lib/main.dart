@@ -1,12 +1,15 @@
 // Package imports:
 import 'package:hive_flutter/adapters.dart';
 import 'package:stack_trace/stack_trace.dart' as stack_trace;
-import 'package:subway_project_230704/presentation/screen/screen_controller.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
 // Project imports:
+import 'package:subway_project_230704/data_provider/subordinate_provider/hive_route_provider.dart';
+import 'package:subway_project_230704/model/route_model.dart';
+import 'package:subway_project_230704/presentation/screen/screen_controller.dart';
 import 'package:subway_project_230704/setting/export+.dart';
 import 'package:subway_project_230704/setting/export.dart';
+import 'model/subFromHive_model.dart';
 import 'setting/firebase_options.dart';
 
 void main() async {
@@ -14,6 +17,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   Hive.registerAdapter(ChipModelAdapter());
+  Hive.registerAdapter(SubwayHiveModelAdapter());
+  Hive.registerAdapter(SubRouteModelAdapter());
+  HiveRouteService.openRouteBox();
   HiveService.openBox();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

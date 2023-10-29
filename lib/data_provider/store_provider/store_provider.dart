@@ -2,6 +2,7 @@
 import 'package:subway_project_230704/setting/export.dart';
 import '../../presentation/screen/screen_controller.dart';
 import '../subordinate_provider/code_provider.dart';
+
 /// 역 정보를 모두 필터링한 뒤에 출발지점 혹은 도착지 정보를 저장하는 구간임 이 구간은 UI변경에 결정적인 역할
 class StoreDataController extends StateNotifier<List<SubwayModel>>{
 

@@ -1,7 +1,8 @@
 // Project imports:
 
-import '../../setting/export.dart';
+// Project imports:
 import '../../setting/export+.dart';
+import '../../setting/export.dart';
 import 'map_screen/map_screen.dart';
 
 /// 호선정보 등등을 필터링합니다.
@@ -19,8 +20,7 @@ class DialogPage extends ConsumerWidget {
         error: (err, stack) => LoadingBox(err.toString()),
         loading: () => LoadingBox('loading.....'),
         data: (data){
-          return SingleChildScrollView(
-            child: ListView.builder(
+          return ListView.builder(
                 shrinkWrap: true,
                 itemCount: data.length,
                 itemBuilder: (context, index){
@@ -170,8 +170,8 @@ class DialogPage extends ConsumerWidget {
                         ),
                       ),
                   );
-                }),
-          );
+                });
+
         },
       ),
     );

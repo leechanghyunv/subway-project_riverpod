@@ -2,6 +2,7 @@
 import '../../model/arrival_filted_model.dart';
 import '../../presentation/screen/screen_controller.dart';
 import '../../setting/export.dart';
+
 /// 실시간 위치 정보를 필터링해서 보여주는 구간임
 final apiservice = ArrivalApiService.create();
 

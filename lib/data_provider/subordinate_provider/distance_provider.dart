@@ -17,10 +17,9 @@ final skapiservice = SkOpenApiService.create();
 final apiresult = FutureProvider.family<List<Itinerary>,DistModel>((ref,dist) async {
 
   Noti.initialize(flutterLocalNotificationsPlugin);
-
+  print('dist_provider');
   try{
     final url = Uri.parse('http://apis.openapi.sk.com/transit/routes');
-
     final headers = {
       'accept': 'application/json', 'appKey': skKey, 'content-type': 'application/json',
     };
@@ -30,6 +29,8 @@ final apiresult = FutureProvider.family<List<Itinerary>,DistModel>((ref,dist) as
     });
 
     final response = await http.post(url, headers: headers, body: body);
+    print('dist_provider');
+    print('dist_provider');
     if(response.statusCode == 200){
       final Map<String, dynamic> utf8String = jsonDecode(Utf8Decoder().convert(response.bodyBytes))['metaData']['plan'];
       List<Itinerary> utfIntoList = utf8String['itineraries'].map<Itinerary>((e) => Itinerary.fromJson(e)).toList();
@@ -88,6 +89,8 @@ final apiresult = FutureProvider.family<List<Itinerary>,DistModel>((ref,dist) as
         NoticeTime(dist.nameA,dist.nameB,formattedRoute,time);
         getAnotherNotice(time,pathtype,formattedpathtype,formattedRoute);
       }
+    } else {
+      throw('distance_calculate: ${response.statusCode}');
     }
     throw('distance_calculate: ${response.statusCode}');
   }catch(e){

@@ -2,8 +2,8 @@
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 // Project imports:
-import '../../../setting/export.dart';
 import '../../../setting/export+.dart';
+import '../../../setting/export.dart';
 
 class TimeTable extends StatelessWidget {
 

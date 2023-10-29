@@ -6,7 +6,6 @@ import '../../model/arrival_model.dart';
 import '../../model/trainstate_model.dart';
 import '../../presentation/screen/screen_controller.dart';
 
-
 /// 실시간 열차 정보를 제공해주는 프로바이더를 다시한번 필터링해주고 UI에 나타내는 프로바이더
 
 class TrainStateController extends StateNotifier<TrainModel>{
